@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+
+body a{
+  text-decoration:none;
+  color: black;
+}
+
+/* Top | Header, landing-page */
+#top-page{
+  height: 100vh;
+  background-color: white;
+}
+
+/* Header | logo, nav, inscr */
+header{
+  background-color: rgb(255, 255, 255);
+}
+
+header img{
+  width:95px;
+}
+
+header ul{
+  display: flex;
+  align-items:center;
+  list-style-type: none;
+  height: 110px;
+}
+
+header li:nth-child(2){
+  margin-left: auto;
+}
+
+header a:hover {
+  color:#0065FC;
+}
+
+header #hebergements {
+  padding-top: 44px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+header #activites {
+  padding-top: 44px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+header #inscription{
+  font-weight: bold;
+  padding-left: 25px;
+  padding-right: 70px;
+  color:#0065FC;
+}
+
+/* Rechercher un hébergement */
+#landing-page h1{
+  font-size: 20px;
+  font-weight:bold;
+  padding-left:45px;
+}
+
+#landing-page h2{
+  font-size: 16px;
+  font-weight:lighter;
+  padding-top: 10px;
+  padding-left:45px;
+}
+
+/* MEDIA QUERY | Desktop */
+@media screen and (min-width: 769px) and (max-width: 2560px){
+
+  header img{
+    width:95px;
+    padding-top:25px;
+    padding-left:45px;
+    padding-right: 20px;
+  }
+
+  header li a:hover {
+    border-top: 2px solid #0065FC;
+  }
+}
+
+/* MEDIA QUERY | Tablet */
+@media screen and (min-width: 426px) and (max-width: 768px){
+  header img{
+    width:95px;
+    padding-top:25px;
+    padding-left:45px;
+    padding-right: 20px;
+  }
+
+  header li a:hover {
+    border-top: 2px solid #0065FC;
+  }
+}
+
+/* MEDIA QUERY | Phone */
+@media screen and (min-width: 0px) and (max-width: 425px){
+
+  header img{
+    padding-left:20px;
+  }
+
+  header ul{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    background-color: white;
+    min-width:375px;
+    padding-top: 15px;
+    padding-bottom: 38px;
+  }
+
+  header #inscription{
+    padding:0;
+    margin-left:165px;
+  }
+
+  header #hebergements{
+    padding-left:35px;
+    padding-right:33px;
+    padding-bottom: 8px;
+    margin-right:10px;
+
+  } 
+
+  header #activites{
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-bottom: 8px;
+  } 
+
+  header li:nth-child(1) {
+    order: 1;
+  }
+  header li:nth-child(2) {
+    order: 3;
+  }
+  header li:nth-child(3) {
+    order: 4;
+  }
+  header li:nth-child(4) {
+    order: 2;
+  }
+
+  header a:hover {
+    border-bottom: 3px solid #0065FC;
+  }
+}
