@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="hébergement, activité, location, vacance">
+  <meta name="description" content="Réservia - Outil de planification de vacances. Hébergements et activités selon la ville. Les hébergements peuvent également être filtrés par thématique.">
   <title>Réservia | Hébergement de vacances. Trouver la location de vacances idéale</title>
   <link rel="stylesheet" href="css\style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,38 +13,49 @@
 </head>
 <body>
 
-  <!-- Haut de la page (Header et landing-page) -->
-  <section id="top-page">
-
-    <!-- Logo, hébergements, activités et inscription) -->
-    <header>
+  <header>
+    <div class="wrapper">
       <nav>
         <ul>
-          <li><img src="ressources/logo.png" alt="Réservia.fr hébergements et activités"></li>
-          <li><a id="hebergements"href="#hebergements">Hébergements</a></li>
-          <li><a id="activites" href="#activites">Activités</a></li>
-          <li id="inscription">S'inscrire</li>
+          <li><img src="images/logo/reservia.png" alt="Réservia, hébergements de vacances"></li>
+          <li><a id="header-hebergement"href="#hebergement">Hébergements</a></li>
+          <li><a id="header-activite" href="#activite">Activités</a></li>
+          <li><a id="header-inscription" class="bleu" href="">S'inscrire</a></li>
         </ul>
       </nav>
-    </header>
-
-    <!-- Rechercher un hébergement -->
-    <div id="landing-page">
-      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <h2>En plein centre ville ou en pleine nature</h2>
-      <div id="zone-location">
-        <div id="box-searchLoc">
-          <i class="fas fa-map-marker-alt fa-lg"></i>
-        </div>
-        <input type="text" id="txt-findLoc" name="searchCity">
-        <button id="btn-searchLoc">Rechercher</button>
-        <button id="btn-small-searchLoc">
-          <i id=ico-search class="fas fa-search fa-lg"></i>
-        </button>
-      </div>
     </div>
-  </section>
+  </header>
 
+  <main>
+    <div class="wrapper">
+      <section id="main-recherche">
+        <!-- Rechercher un hébergement -->
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h2>En plein centre ville ou en pleine nature</h2>
+        <div id="main-divSearch">
+          <div id="main-boxIconeSearch">
+            <i class="fas fa-map-marker-alt fa-lg"></i>
+          </div>
+          <input type="text" id="main-txtSearch" name="search">
+          <button id="main-btnSearch" class="fondBleu">Rechercher</button>
+          <button id="main-btnSearch-sm" class="fondBleu">
+            <i id=ico-search class="fas fa-search fa-lg"></i>
+          </button>
+        </div>
+      </section>
+  
+      <section id="main-hebergement">
+      </section>
+  
+      <section id="main-activite">
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+    </div>
+  </footer>
 
 </body>
 </html>
