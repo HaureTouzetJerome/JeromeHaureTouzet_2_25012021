@@ -155,6 +155,40 @@ outline: none;
   font-size: 17px;
 }
 
+/*-- main-info | Info*/
+#main-info{
+  margin-top: 35px;
+}
+
+#main-info .divInfo{
+  display: flex;
+}
+  
+#main-info .circleIco{
+  width: 23px;
+  height: 23px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d6d5d5;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#main-info .circleIco i{
+  font-size:small;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+#main-info span{
+  font-size: 15px;
+  height: 23px;
+  line-height: 23px;
+  margin-left:12px;
+}
+
+
+
 /*@@ MEDIA QUERY | Desktop & Tablet*/
 @media screen and (min-width: 426px) and (max-width: 2560px){
   .wrapper{
@@ -324,5 +358,10 @@ outline: none;
 
   #main-filter .btnfilter span{
     margin-right: 17px;
+  }
+
+  /*-- main-info | Info*/
+  #main-info{
+    margin-top:28px;
   }
 }
