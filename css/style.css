@@ -24,12 +24,24 @@ button{
   cursor:pointer;
 }
 
-.bleu{
+.blue{
   color:#0065FC;
 }
 
-.fondBleu{
+.bgBlue{
   background-color: #0065FC;
+}
+
+.bgBlueLight{
+  background-color: #DEEBFF;
+}
+
+.bgGreyLight{
+  background-color: #e6e5e5;
+}
+
+.bdGreyLight{
+  border-color: #e6e5e5;
 }
 
 /*-- header | Réservia, Hébergement, Activité, S'insrire */
@@ -37,14 +49,14 @@ header img{
   width:90px;
 }
 
-#header-hebergement:focus {
+#hebergement:focus {
   color:#0065FC;
 }
 
-#header-activite:focus {
+#activite:focus {
   color:#0065FC;
 }
-#header-inscription{
+#inscription{
   font-weight: bold;
 }
 /*-- main-recherche | Titre, Recherche, Filtre, Information*/
@@ -61,27 +73,27 @@ header img{
 }
 
 /*-- main-recherche | Recherche */
-#main-divSearch{
+#divSearch{
   display:flex;
   width: 418px;
   line-height: 20px;
   margin-top: 20px;
 }
 
-#main-boxIconeSearch{
+#icoMap{
   display: flex;
   align-items:center;
   width: 50px;
   height: 52px;
-  background:#F2F2F2;
   border-radius: 10px 0 0 10px;
 }
 
-#main-boxIconeSearch i{
+#icoMap i{
+  font-size: 18px;
   margin-left:17px;
 }
 
-#main-txtSearch{
+#txtSearch{
   font-size: 17px;
   font-weight:bold;
   width: 200px;
@@ -89,48 +101,46 @@ header img{
   border-style: solid;
   border-width: 1px;
   border-right: none;
-  border-color: #F2F2F2;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-#main-txtSearch:focus-within{
+#txtSearch:focus-within{
 outline: none;
 }
 
 /*-- main-recherche | Filtre */
-#main-filter{
+#divFilter{
   display:flex;
   width: 418px;
   line-height: 48px;
-  margin-top: 32px;
+  margin-top: 21px;
   margin-left: 5px;
 }
 
-#main-filter #lblFilter{
+#divFilter #lblFilter{
   margin-left: 7px;
   font-weight: bold;
 }
 
-#main-filter .divfilter{
+#divFilter .filter{
   display: flex;
   position: relative;
 }
 
-#main-filter .circleIco{
+#divFilter .icoFilter{
   width: 48px;
   height: 48px;
-  background-color: #DEEBFF;
   border-radius: 50%;
   position: absolute;
   left: 33px;
 }
 
-#main-filter .circleIco i{
+#divFilter .icoFilter i{
   margin-left: 15px;
 }
 
-#main-filter .btnfilter{
+#divFilter .btnFilter{
   height: 44px;
   text-align: center;
   line-height: 45px;
@@ -138,17 +148,16 @@ outline: none;
   cursor: pointer;
   border-style: solid;
   border-width: 2px;
-  border-color: #F2F2F2;
   border-radius: 35px;
   background-color: white;
 }
 
-#main-filter .btnfilter:hover{
+#divFilter .btnFilter:hover{
   background-color: #0065FC;
   color:white;
 }
 
-#main-filter .btnfilter span{
+#divFilter .btnFilter span{
   margin-left: 60px;
   margin-right: 30px;
   font-weight: bold;
@@ -156,38 +165,37 @@ outline: none;
 }
 
 /*-- main-info | Info*/
-#main-info{
+#divInfo{
   margin-top: 35px;
 }
 
-#main-info .divInfo{
+#divInfo .info{
   display: flex;
 }
   
-#main-info .circleIco{
+#divInfo .icoInfo{
   width: 23px;
   height: 23px;
   border-style: solid;
   border-width: 1px;
-  border-color: #d6d5d5;
+  /* border-color: #d6d5d5; */
   background-color: white;
   border-radius: 50%;
 }
 
-#main-info .circleIco i{
+#divInfo .icoInfo i{
   font-size:small;
   margin-left: 9px;
   margin-right: 9px;
 }
 
-#main-info span{
+#divInfo span{
   font-size: 15px;
   height: 23px;
   line-height: 23px;
   margin-left:12px;
 }
-
-
+/*-- main-hebergement| Test*/
 
 /*@@ MEDIA QUERY | Desktop & Tablet*/
 @media screen and (min-width: 426px) and (max-width: 2560px){
@@ -205,33 +213,33 @@ outline: none;
     margin-left: auto;
   }
   
-  #header-hebergement:focus {
+  #hebergement:focus {
     border-top: 2px solid #0065FC;
   }
   
-  #header-activite:focus {
+  #activite:focus {
     border-top: 2px solid #0065FC;
   }
   
-  #header-hebergement {
+  #hebergement {
     padding-top: 44px;
     padding-left: 25px;
     padding-right: 25px;
   }
   
-  #header-activite {
+  #activite {
     padding-top: 44px;
     padding-left: 50px;
     padding-right: 50px;
   }
   
-  #header-inscription{
+  #inscription{
     margin-left: 18px;
     margin-right: 48px;
   }
 
 /*-- main-recherche | Menu de recheche, les filtres et le label d'information (+500) */
-  #main-btnSearch{
+  #btnSearch{
     font-size: 17px;
     letter-spacing: 1px;
     font-weight: bold;
@@ -242,7 +250,7 @@ outline: none;
     height: 52px;
   }
 
-  #main-btnSearch-sm{
+  #btnSearch-sm{
     display:none;
   }
 }
@@ -275,26 +283,26 @@ outline: none;
     order: 3;
   }
 
-  #header-inscription {
+  #inscription {
     margin-top: 200px;
     margin-left:175px;
   }
   
-  #header-hebergement:focus {
+  #hebergement:focus {
     border-bottom: 3px solid #0065FC;
   }
   
-  #header-activite:focus {
+  #activite:focus {
     border-bottom: 3px solid #0065FC;
   }
   
-  #header-hebergement {
+  #hebergement {
     padding-bottom: 10px;
     padding-left:37px;
     padding-right:37px;
   } 
   
-  #header-activite {
+  #activite {
     padding-bottom: 10px;
     padding-left: 63px;
     padding-right: 63px;
@@ -310,58 +318,67 @@ outline: none;
     font-size: 23px;
   }
  /*-- main-recherche | Recherche*/
-  #main-divSearch{
+  #divSearch{
     width:332px;
     margin-top: 30px;
   }
 
-  #main-btnSearch{
+  #btnSearch{
     display:none;
   }
 
-  #main-btnSearch-sm{
+  #btnSearch-sm{
     color:white;
     border-radius: 35%;
     border: none;
     width: 50px;
     height: 50px;
   }
+
+  #btnSearch-sm i{
+    font-size: 16px;
+  }
  /*-- main-recherche | Filtre*/
-  #main-filter{
+  #divFilter{
     display:flex;
     flex-direction: column;
     width: 332px;
     margin-left: 0px;
   }
   
-  #main-filter #lblFilter{
+  #divFilter #lblFilter{
     margin-left: 0px;
   }
   
-  #main-filter .divfilter{
+  #divFilter .filter{
     margin-top: 5px;
     margin-bottom: 5px;
     align-items: center;
   }
 
-  #main-filter #divfilterFam{
+  #divFilter #divFilterFam{
     margin-left:10px;
   }
 
-  #main-filter .circleIco{
+  #divFilter .icoFilter{
     left: 0px;
   }
 
-  #main-filter .btnfilter{ 
+  #divFilter .btnFilter{ 
     margin-left: 0px;
   }
 
-  #main-filter .btnfilter span{
+  #divFilter .btnFilter span{
     margin-right: 17px;
   }
 
   /*-- main-info | Info*/
-  #main-info{
+  #divInfo{
     margin-top:28px;
   }
+
+  /*-- main-hebergement | test*/
+
+
+
 }
