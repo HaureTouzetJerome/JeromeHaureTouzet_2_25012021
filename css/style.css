@@ -59,7 +59,7 @@ header img{
 #inscription{
   font-weight: bold;
 }
-/*-- main-recherche | Titre, Recherche, Filtre, Information*/
+
 /*-- main-recherche | Titre */
 #main-recherche h1{
   font-size: 23px;
@@ -178,7 +178,6 @@ outline: none;
   height: 23px;
   border-style: solid;
   border-width: 1px;
-  /* border-color: #d6d5d5; */
   background-color: white;
   border-radius: 50%;
 }
@@ -195,7 +194,56 @@ outline: none;
   line-height: 23px;
   margin-left:12px;
 }
-/*-- main-hebergement| Test*/
+
+/*-- main-hebergement*/
+#divMainContainer{
+  display: flex;
+  background-color: yellowgreen;
+}
+
+.sectionContainer{
+  background-color:#aeaeb4;
+  border:3px solid #717172;
+  border-radius: 8px;
+  padding: 10px 10px;
+}
+
+.element{
+  color:white;
+  background-color:#7971ea;
+  border:3px solid #443ea0;
+  border-radius: 8px;
+  padding: 10px 10px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+}
+
+.grow-6{
+  flex-grow:6;
+}
+.grow-12{
+  flex-grow:12;
+}
+.grow-4{
+  flex-grow:4;
+}
+
+#main-hebergement{
+  margin-top:50px;
+}
+
+#divHebergement{
+  margin-right: 50px;
+}
+
+
+
+
+
 
 /*@@ MEDIA QUERY | Desktop & Tablet*/
 @media screen and (min-width: 426px) and (max-width: 2560px){
@@ -222,7 +270,6 @@ outline: none;
   }
   
   #hebergement {
-    padding-top: 44px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -377,8 +424,17 @@ outline: none;
     margin-top:28px;
   }
 
-  /*-- main-hebergement | test*/
+  /*-- main-hebergement */
+  #divHebergement{
+    margin-right: 0px;
+  }
 
+  .row{
+    flex-wrap: wrap;
+  }
 
+  #divMainContainer{
+    flex-wrap: wrap-reverse;
+  }
 
 }
