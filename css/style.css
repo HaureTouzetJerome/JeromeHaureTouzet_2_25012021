@@ -1,110 +1,147 @@
-/* GENERAL */
+/************************************** GENERAL *********/
 *{
-  margin:0;
-  padding:0;
+  margin:0px;
+  padding:0px;
   font-family: 'Raleway', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
-
 body{
-  background-color: white;
+  background-color: rgb(71, 69, 69);
 }
 
 ul{
   list-style: none;
 }
-
 a{
   color: black;
   text-decoration: none;
 }
-
 button{
   outline: none;
   cursor:pointer;
 }
 
+span{
+  white-space:pre;
+}
+
 .blue{
   color:#0065FC;
 }
-
 .bgBlue{
   background-color: #0065FC;
 }
-
 .bgBlueLight{
   background-color: #DEEBFF;
 }
-
 .bgGreyLight{
   background-color: #e6e5e5;
 }
-
 .bdGreyLight{
   border-color: #e6e5e5;
 }
-
-/*-- header | Réservia, Hébergement, Activité, S'insrire */
+/************************************** HEADER *********/
+/*-- header | WRAPPER */
 header .wrapper{
-  margin: 46px 30px 0px 55px;
+  margin: 42px 0px 0px 50px;
+  width:auto;
+  background-color: rgb(94, 107, 68);
+}
+header #divContainer{
+  display: flex;
 }
 
-header img{
+/*-- header | RESERVIA */
+header #divContainer #divReservia{
+  margin-right: auto;
+  background-color: darkgray;
+}
+header #divReservia img{
   width:90px;
+  padding-right: 50px;
 }
 
-header #hebergement:focus {
+/*-- header | NAVIGATION */
+header #divContainer nav{
+  background-color: darkkhaki;
+}
+header #divContainer nav ul{
+  display: flex;
+}
+/*-- header | NAVIGATION - Hebergement */
+header #divContainer nav ul li #hebergement {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+header #divContainer nav ul li #hebergement:focus {
   color:#0065FC;
+  border-top: 2px solid #0065FC;
+}
+/*-- header | NAVIGATION - Activite */
+header #divContainer nav ul li #activite {
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+header #divContainer nav ul li #activite:focus {
+  color:#0065FC;
+  border-top: 2px solid #0065FC;
 }
 
-#activite:focus {
-  color:#0065FC;
-}
-#inscription{
+/*-- header | INSCRIPTION */
+header #divContainer #divInscription #inscription{
+  display:inline-block;
+  width: 120px;
+  text-align: center;
   font-weight: bold;
+  margin-right: 50px;
+  background-color: darkseagreen;
 }
 
-/*-- main-recherche | Titre */
+/************************************** MAIN *********/
+/*-- main | WRAPPER */
 main .wrapper{
-  margin: 46px 30px 0px 55px;
+  margin: 42px 50px 0px 50px;
+  width:auto;
+  min-width: 584px;
+  overflow-wrap: break-word;
+  background-color: rgb(94, 107, 68);
 }
 
+/*-- main-recherche | TITRE*/
 #main-recherche h1{
-  font-size: 23px;
+  font-size: 20px;
   font-weight:bold;
+  background-color: rgb(231, 192, 93);
 }
-
 #main-recherche h2{
   font-size: 16px;
   font-weight:lighter;
   margin-top: 10px;
+  background-color: rgb(231, 192, 93);
 }
 
-/*-- main-recherche | Recherche */
+/*-- main-recherche | RECHERCHE */
 #main-recherche #divSearch{
   display:flex;
-  width: 418px;
-  line-height: 20px;
   margin-top: 20px;
 }
-
 #main-recherche #icoMap{
   display: flex;
   align-items:center;
   width: 50px;
   height: 52px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 15px 0 0 15px;
 }
-
 #main-recherche #icoMap i{
   font-size: 18px;
   margin-left:17px;
 }
-
 #main-recherche #txtSearch{
-  font-size: 17px;
   font-weight:bold;
-  width: 200px;
+  width: 60%;
+  max-width: 200px;
   height: 50px;
   border-style: solid;
   border-width: 1px;
@@ -112,75 +149,79 @@ main .wrapper{
   padding-left: 15px;
   padding-right: 15px;
 }
-
 #main-recherche #txtSearch:focus-within{
 outline: none;
 }
+#main-recherche #btnSearch:hover{
+  border: 2px solid white;
+  background-color: #0065FC;
+  color:black;
+}
+#main-recherche #btnSearch{
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  color:white;
+  border-radius: 0 15px 15px 0px;
+  border: none;
+  width: 136px;
+  height: 52px;
+}
+#main-recherche #btnSearch-sm{
+  display:none;
+}
 
-/*-- main-recherche | Filtre */
+/*-- main-recherche | FILTRE */
 #main-recherche #divFilter{
   display:flex;
-  width: 418px;
-  line-height: 48px;
-  margin-top: 21px;
-  margin-left: 5px;
+  margin-top: 30px;
+  background-color: lightcoral;
 }
-
 #main-recherche #divFilter #lblFilter{
-  margin-left: 7px;
   font-weight: bold;
+  margin-right: 25px;
+  padding-top: 15px;
 }
-
-#main-recherche #divFilter .filter{
-  display: flex;
-  position: relative;
-}
-
-#main-recherche #divFilter .icoFilter{
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: absolute;
-  left: 33px;
-}
-
-#main-recherche #divFilter .icoFilter i{
-  margin-left: 15px;
-}
-
-#main-recherche #divFilter .btnFilter{
-  height: 44px;
-  text-align: center;
-  line-height: 45px;
-  margin-left: 34px;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 35px;
-  background-color: white;
-}
-
-#main-recherche #divFilter .btnFilter:hover{
-  background-color: #0065FC;
+#main-recherche #divFilter li:hover{
+  background-color:#0065FC;
   color:white;
 }
-
-#main-recherche #divFilter .btnFilter span{
-  margin-left: 60px;
-  margin-right: 30px;
+#main-recherche #divFilter li {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #e6e5e5;
+  border-radius: 35px;
+  margin-right:32px;
+  margin-bottom:10px;
+  padding-left: 58px;
+  padding-right: 22px;
   font-weight: bold;
-  font-size: 17px;
+  height: 45px;
+  background-color: rgb(181, 235, 101);
+  position: relative;
+}
+#main-recherche #divFilter li .filter-icon {
+  height:45px;
+  width:45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color:#DEEBFF;
+  margin-right: 10px;
+  border:2px solid #DEEBFF;
+  position:absolute;
+  left:-1px;
 }
 
-/*-- main-recherche | Info*/
+/*-- main-recherche | INFO*/
 #main-recherche #divInfo{
   margin-top: 35px;
+  background-color: mediumspringgreen;
 }
-
 #main-recherche #divInfo .info{
   display: flex;
 }
-  
 #main-recherche #divInfo .icoInfo{
   width: 23px;
   height: 23px;
@@ -189,32 +230,26 @@ outline: none;
   background-color: white;
   border-radius: 50%;
 }
-
 #main-recherche #divInfo .icoInfo i{
   font-size:small;
   margin-left: 9px;
   margin-right: 9px;
 }
-
 #main-recherche #divInfo span{
-  font-size: 15px;
-  height: 23px;
-  line-height: 23px;
+  white-space: normal;
   margin-left:12px;
 }
 
-/*-- main-hebergement*/
+/*-- main-hebergement | HEBERGEMENT*/
 #main-hebergement #divMainContainer{
   display: flex;
 }
-
 #main-hebergement .sectionContainer{
   background-color:#aeaeb4;
   border:3px solid #717172;
   border-radius: 8px;
   padding: 10px 10px;
 }
-
 #main-hebergement .element{
   color:white;
   background-color:#7971ea;
@@ -224,11 +259,9 @@ outline: none;
   font-size: 1.5em;
   text-align: center;
 }
-
 #main-hebergement .row{
   display: flex;
 }
-
 #main-hebergement .grow-6{
   flex-grow:6;
 }
@@ -238,28 +271,24 @@ outline: none;
 #main-hebergement .grow-4{
   flex-grow:4;
 }
-
 #main-hebergement{
   margin-top:50px;
 }
-
 #main-hebergement #divHebergement{
-  margin-right: 50px;
+  margin-right: 5%;
 }
 
-/*-- main-activite */
+/*-- main-activite | ACTIVITE */
 #main-activite #divMainContainer{
   display:flex;
   background-color: yellowgreen;
 }
-
 #main-activite .sectionContainer{
   background-color:#aeaeb4;
   border:3px solid #717172;
   border-radius: 8px;
   padding: 10px 10px;
 }
-
 #main-activite .element{
   color:white;
   background-color:#7971ea;
@@ -269,36 +298,38 @@ outline: none;
   font-size: 1.5em;
   text-align: center;
 }
-
 #main-activite .row{
   display: flex;
 }
-
 #main-activite .grow-3{
   flex-grow: 3;
 }
-
 #main-activite .grow-12{
   flex-grow: 12;
 }
 
-/*-- footer */
-footer .wrapper{
-  margin: 46px 30px 0px 55px;
+/************************************** FOOTER *********/
+/*-- footer | WRAPPER */
+footer{
+  background-color: rgb(132, 139, 139);
 }
-
+footer .wrapper{
+  width: auto;
+  min-width: 684px;
+  background-color: rgb(132, 139, 139);
+  margin: 40px 50px 0px 50px;
+  padding-top: 40px;
+}
 footer #divMainContainer{
   display:flex;
   background-color: yellowgreen;
 }
-
 footer .sectionContainer{
   background-color:#aeaeb4;
   border:3px solid #717172;
   border-radius: 8px;
   padding: 10px 10px;
 }
-
 footer .element{
   color:white;
   background-color:#7971ea;
@@ -308,147 +339,108 @@ footer .element{
   font-size: 1.5em;
   text-align: center;
 }
-
 footer .row{
   display: flex;
 }
-
 footer .grow-4{
   flex-grow: 3;
 }
-
 footer .grow-12{
   flex-grow: 12;
 }
 
-
-/*@@ MEDIA QUERY | Desktop & Tablet*/
-@media screen and (min-width: 426px) and (max-width: 2560px){
-  /*-- header | Réservia, Hébergement, Activité, S'insrire */
-  header ul{
-    display: flex;
-    height: 35px;
+/* @MEDIA QUERY | Tablet */
+@media all and (min-width: 426px) and (max-width: 768px){
+  body{
+    background-color: rgb(214, 163, 33);
   }
-  
-  header li:nth-child(2){
-    margin-left: auto;
-  }
-  
-  header #hebergement:focus {
-    border-top: 2px solid #0065FC;
-  }
-  
-  header #activite:focus {
-    border-top: 2px solid #0065FC;
-  }
-  
-  header #hebergement {
-    padding-top: 44px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-  
-  header #activite {
-    padding-top: 44px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  
-  header #inscription{
-    margin-left: 18px;
-    margin-right: 48px;
-  }
-
-/*-- main-recherche | Menu de recheche, les filtres et le label d'information (+500) */
-  #main-recherche #btnSearch{
-    font-size: 17px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color:white;
-    border-radius: 0 10px 10px 0px;
-    border: none;
-    width: 136px;
-    height: 52px;
-  }
-
-  #main-recherche #btnSearch-sm{
-    display:none;
+  /*-- main-recherche | FILTRE */
+  #main-recherche #divFilter li {
+    margin-right:33px;
   }
 }
 
-/*@@ MEDIA QUERY | Phone */
-@media screen and (max-width: 425px){
-  /*-- header | Réservia, Hébergement, Activité, S'insrire */
+/* @MEDIA QUERY | Phone */
+@media all and (max-width: 425px){
+  /************************************** HEADER *********/
+  /*-- header | WRAPPER */
   header .wrapper{
-    width: 425px;
-    margin: 16px 0px 0px 0px;
+    width:auto;
+    margin: 15px 0px 0px 0px;
+    min-width: 320px;
+  }
+  header #divContainer{
+    flex-wrap:wrap;
+    align-items: center;
+    height: 125px;
   }
 
-  header img{
+  /*-- header | RESERVIA */
+  header #divContainer #divReservia img{
     margin-left:20px;
   }
 
-  header ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items:center;
-    height: 110px;
-    margin-bottom: 0px;
+  /*-- header | NAVIGATION */
+  header #divContainer nav{
+    width: 100%;
+    order:3;
   }
-
-  header li:nth-child(3) {
-    order: 4;
+  header #divContainer nav ul li {
+    text-align: center;
+    width: 50%;
   }
-
-  header li:nth-child(2) {
-    order: 3;
+  header #divContainer nav ul li #hebergement,
+  header #divContainer nav ul li #activite {
+    display: inline-block;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
   }
-
-  header #inscription {
-    margin-top: 200px;
-    margin-left:175px;
-  }
-  
-  header #hebergement:focus {
+  header #divContainer nav ul li #hebergement:focus, 
+  header #divContainer nav ul li #activite:focus {
+    border-top: none;
     border-bottom: 3px solid #0065FC;
   }
-  
-  header #activite:focus {
-    border-bottom: 3px solid #0065FC;
-  }
-  
-  header #hebergement {
-    padding-bottom: 10px;
-    padding-left:37px;
-    padding-right:37px;
-  } 
-  
-  header #activite {
-    padding-bottom: 10px;
-    padding-left: 63px;
-    padding-right: 63px;
-  }
 
-  /*-- main-recherche | Recheche, Filtre, Label, Info*/
+  /*-- header | INSCRIPTION */
+  header #divContainer #divInscription{
+    order:2;
+    background-color: darkgoldenrod;
+  }
+  header #divContainer #divInscription #inscription {
+    margin-right: 0px;
+  }
+  /************************************** MAIN *********/
+  /*-- main | WRAPPER */
   main .wrapper{
-    width: 332px;
-    margin: 40px 20px 0px 20px;
-  }
- /*-- main-recherche | Titre*/
-  #main-recherche h1{
-    font-size: 23px;
-  }
- /*-- main-recherche | Recherche*/
- #main-recherche #divSearch{
-    width:332px;
-    margin-top: 30px;
+    margin: 0px 20px 0px 20px;
+    width: auto;
+    min-width: 280px;
+    background-color: darkslategray;
   }
 
+  /*-- main-recherche | TITRE*/
+  #main-recherche h1{
+    letter-spacing: 1.05px;
+    background-color: dimgray;
+  }
+  #main-recherche h2{
+    background-color: dimgray;
+  }
+
+  /*-- main-recherche | RECHERCHE*/
+  #main-recherche #divSearch{
+    margin-top: 40px;
+  }
   #main-recherche #btnSearch{
     display:none;
   }
-
+  #main-recherche #btnSearch-sm:hover{
+    border: 2px solid white;
+    background-color: #0065FC;
+    color:black;
+  }
   #main-recherche #btnSearch-sm{
+    display: inline;
     color:white;
     border-radius: 35%;
     border: none;
@@ -459,78 +451,58 @@ footer .grow-12{
   #main-recherche #btnSearch-sm i{
     font-size: 16px;
   }
- /*-- main-recherche | Filtre*/
- #main-recherche #divFilter{
-    display:flex;
-    flex-direction: column;
-    width: 332px;
-    margin-left: 0px;
+
+  /*-- main-recherche | FILTRE */
+  #main-recherche #divFilter{
+    display:inline-block;
   }
-  
   #main-recherche #divFilter #lblFilter{
-    margin-left: 0px;
+    display: inline-block;
+    margin-bottom: 20px;
   }
-  
-  #main-recherche #divFilter .filter{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: center;
+  #main-recherche #divFilter li{
+    margin-right:5px;
   }
 
-  #main-recherche #divFilter #divFilterFam{
-    margin-left:10px;
+  /*-- main-recherche | INFO*/
+  #main-recherche #divInfo{
+    margin-top: 35px;
+    background-color: rgb(0, 79, 250);
   }
 
-  #main-recherche #divFilter .icoFilter{
-    left: 0px;
-  }
-
-  #main-recherche #divFilter .btnFilter{ 
-    margin-left: 0px;
-  }
-
-  #main-recherche #divFilter .btnFilter span{
-    margin-right: 17px;
-  }
-
-  /*-- main-info | Info*/
-  #main-info #divInfo{
-    margin-top:28px;
-  }
-
-  /*-- main-hebergement */
+  /*-- main-hebergement | HEBERGEMENT*/
   #main-hebergement #divHebergement{
     margin-right: 0px;
   }
-
   #main-hebergement .row{
     flex-wrap: wrap;
   }
-
   #main-hebergement #divMainContainer{
     flex-wrap: wrap-reverse;
   }
 
-  /*-- main-activite */
+  /*-- main-activite | ACTIVITE*/
   #main-activite #divMainContainer{
     flex-wrap: wrap;
   }
-
   #main-activite .row{
     flex-wrap: wrap;
   }
 
-  /*-- footer */
+  /************************************** FOOTER *********/
+  /*-- footer | WRAPPER */
   footer .wrapper{
-    width: 332px;
+    width: auto;
+    min-width: 320px;
     margin: 40px 20px 0px 20px;
+    background-color: rgb(132, 139, 139);
   }
 
   footer #divMainContainer{
     flex-wrap: wrap;
   }
-
   footer .row{
     flex-wrap: wrap;
   }
 }
+

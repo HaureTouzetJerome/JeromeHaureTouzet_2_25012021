@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="hébergement, activité, location, vacance">
   <meta name="description" content="Réservia - Outil de planification de vacances. Hébergements et activités selon la ville. Les hébergements peuvent également être filtrés par thématique.">
   <title>Réservia | Hébergement de vacances. Trouver la location de vacances idéale</title>
-  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-
   <header>
-    <div class="wrapper">
+    <div id="divContainer" class="wrapper">
+      <div id="divReservia">
+        <img src="images/logo/reservia.png" alt="Réservia, hébergements de vacances">
+      </div>
       <nav>
         <ul>
-          <li><img src="images/logo/reservia.png" alt="Réservia, hébergements de vacances"></li>
-          <li><a id="hebergement"href="#hebergement">Hébergements</a></li>
+          <li><a id="hebergement" href="#hebergement">Hébergements</a></li>
           <li><a id="activite" href="#activite">Activités</a></li>
-          <li><a id="inscription" class="blue" href="">S'inscrire</a></li>
         </ul>
       </nav>
+      <div id="divInscription">
+        <a id="inscription" class="blue" href="">S'inscrire</a>
+      </div>
     </div>
   </header>
-
   <main>
     <div class="wrapper">
       <section id="main-recherche">
@@ -36,7 +37,7 @@
           <div id="icoMap" class="bgGreyLight">
             <i class="fas fa-map-marker-alt fa-lg"></i>
           </div>
-          <input type="text" id="txtSearch" class="bdGreyLight" name="search">
+          <input type="text" id="txtSearch" class="bdGreyLight" name="search" value="Marseille, France">
           <button id="btnSearch" class="bgBlue">Rechercher</button>
           <button id="btnSearch-sm" class="bgBlue">
             <i class="fas fa-search fa-lg"></i>
@@ -45,22 +46,32 @@
         <!-- Les filtres de recherche -->
         <div id="divFilter">
           <span id="lblFilter">Filtres</span>
-          <div class="filter">
-            <div class="icoFilter bgBlueLight"><i class="fas fa-money-bill-wave blue"></i></div>
-            <div class="btnFilter bdGreyLight"><span>Économique</span></div>
-            <div id="divFilterFam" class="filter">
-              <div class="icoFilter bgBlueLight"><i class="fas fa-child blue"></i></div>
-              <div class="btnFilter bdGreyLight"><span>Familial</span></div>
-            </div>
-          </div>
-          <div class="filter">
-            <div class="icoFilter bgBlueLight"><i class="fas fa-heart blue"></i></div>
-            <div class="btnFilter bdGreyLight"><span>Romantique</span></div>
-          </div>
-          <div class="filter">
-            <div class="icoFilter bgBlueLight"><i class="fas fa-dog blue"></i></div>
-            <div class="btnFilter bdGreyLight"><pre><span>Animaux autorisés</span></pre></div>
-          </div>
+          <ul>
+            <li>
+              <div class="filter-icon">
+                <i class="fas fa-money-bill-wave blue"></i>
+              </div>
+              <span>Économique</span>
+            </li>
+            <li>
+              <div class="filter-icon">
+                <i class="fas fa-child blue"></i>
+              </div>
+              <span>Familial</span>
+            </li>
+            <li>
+              <div class="filter-icon">
+                <i class="fas fa-heart blue"></i>
+              </div>
+              <span>Romantique</span>
+            </li>
+            <li>
+              <div class="filter-icon">
+                <i class="fas fa-dog blue"></i>
+              </div>
+              <span>Animaux autorisés</span>
+            </li>
+          </ul>
         </div>
         <!-- Le label d'information -->
         <div id="divInfo">
@@ -72,7 +83,7 @@
       </section>
       <section id="main-hebergement">
         <div id="divMainContainer">
-            <!-- section hebergement -->
+            <!-- Hebergement -->
             <div id="divHebergement" class="sectionContainer grow-6">
               <div class="row">
                 <div class="element grow-12">Hébergement</div>
@@ -91,7 +102,7 @@
                 <div class="element grow-12">plus</div>
               </div>
             </div>
-            <!-- section populaire -->
+            <!-- Les plus populaires -->
             <div id="divPopulaire" class="sectionContainer grow-6">
               <div class="row">
                 <div class="element grow-12">Les plus populaires</div>  
@@ -147,7 +158,6 @@
       </section>
     </div>
   </main>
-
   <footer>
     <div class="wrapper">
       <div id="divMainContainer">
@@ -190,9 +200,8 @@
             <div class="element grow-12">Nous contacter</div>
           </div>
         </div>
-      </div>
+      </div>      
     </div>
   </footer>
-
 </body>
 </html>
