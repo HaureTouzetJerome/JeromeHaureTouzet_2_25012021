@@ -1,12 +1,12 @@
 /************************************** GENERAL *********/
 *{
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding:0;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
 }
 body{
-  background-color: rgb(71, 69, 69);
+  background-color: #3b404e;
 }
 
 ul{
@@ -28,6 +28,9 @@ span{
 .blue{
   color:#0065FC;
 }
+.greyLight{
+  color:#D9D9D9;
+}
 .bgBlue{
   background-color: #0065FC;
 }
@@ -40,469 +43,290 @@ span{
 .bdGreyLight{
   border-color: #e6e5e5;
 }
+
+/************************************** GRID *********/
+/*gridReservia*/
+#gridReservia{
+  display: grid;
+  width: auto;
+  height: 600px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+      "header"
+      "main"
+      "footer";
+}
+header {
+  grid-area: header;
+}
+main{
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  /* grid-row: 4 / 5;
+  grid-column: 1 / 3; */
+}
+
+/*gridMain*/
+main{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+      "recherche"
+      "hebergementContainer"
+      "activite";
+}
+main #recherche {
+  grid-area: recherche;
+}
+main #hebergementContainer {
+  grid-area: hebergementContainer;
+}
+main #activite {
+  grid-area: activite;
+}
+
+/*gridHebergement*/
+main #hebergementContainer{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+      "hebergement populaire";
+}
+main #hebergement {
+  grid-area: hebergement;
+}
+main #populaire {
+  grid-area: populaire;
+}
+
+/*gridHebergement*/
+main #hebergement{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "titre titre titre"
+      "cardH1 cardH2 cardH3"
+      "cardH4 cardH5 cardH6"
+      "afficherPlus afficherPlus afficherPlus";
+}
+#hebergement h2 {
+  grid-area: titre;
+}
+#cardH1 {
+  grid-area: cardH1;
+}
+#hebergement a {
+  grid-area: afficherPlus;
+}
+
+/*gridPopulaire*/
+main #populaire{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "titre"
+      "cardP1"
+      "cardP2"
+      "cardP3";
+}
+#populaire h2 {
+  grid-area: titre;
+}
+#cardP1 {
+  grid-area: cardP1;
+}
+#cardP2 {
+  grid-area: cardP2;
+}
+#cardP3 {
+  grid-area: cardP3;
+}
+
+/*gridActivite*/
+main #activite{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "titre titre titre titre"
+      "cardA1 cardA2 cardA4 cardA5"
+      "cardA1 cardA2 cardA4 cardA5"
+      "cardA1 cardA2 cardA4 cardA6"
+      "cardA1 cardA3 cardA4 cardA6";
+}
+#activite h2 {
+  grid-area: titre;
+}
+#cardA1 {
+  grid-area: cardA1;
+}
+#cardA2 {
+  grid-area: cardA2;
+}
+#cardA3 {
+  grid-area: cardA3;
+}
+#cardA4 {
+  grid-area: cardA4;
+}
+#cardA5 {
+  grid-area: cardA5;
+}
+#cardA6 {
+  grid-area: cardA6;
+}
+
+/*gridFooter*/
+#footerContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+      "aPropos nosHebergements assistance";
+}
+#footerContainer #aPropos {
+  grid-area: aPropos;
+}
+#footerContainer #nosHebergements {
+  grid-area: nosHebergements;
+}
+#footerContainerter #assistance {
+  grid-area: assistance;
+}
+
+/* OTHER STYLES */
+
+body {
+  background-color: #3b404e;
+
+}
+
+header, #recherche, #hebergement, #populaire, #activite, footer {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: #ffffff;
+  border-radius: 4px;
+  border: 6px solid #171717;
+  font-size: 18px;
+  font-weight: bold;
+}
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+
+/*-- Reservia | WRAPPER */
+#wrapperReservia{
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /************************************** HEADER *********/
 /*-- header | WRAPPER */
-header .wrapper{
-  margin: 42px 0px 0px 50px;
-  width:auto;
-  background-color: rgb(94, 107, 68);
-}
-header #divContainer{
-  display: flex;
-}
-
-/*-- header | RESERVIA */
-header #divContainer #divReservia{
-  margin-right: auto;
-  background-color: darkgray;
-}
-header #divReservia img{
-  width:90px;
-  padding-right: 50px;
-}
-
-/*-- header | NAVIGATION */
-header #divContainer nav{
-  background-color: darkkhaki;
-}
-header #divContainer nav ul{
-  display: flex;
-}
-/*-- header | NAVIGATION - Hebergement */
-header #divContainer nav ul li #hebergement {
-  padding-top: 40px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-header #divContainer nav ul li #hebergement:focus {
-  color:#0065FC;
-  border-top: 2px solid #0065FC;
-}
-/*-- header | NAVIGATION - Activite */
-header #divContainer nav ul li #activite {
-  padding-top: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-header #divContainer nav ul li #activite:focus {
-  color:#0065FC;
-  border-top: 2px solid #0065FC;
-}
-
-/*-- header | INSCRIPTION */
-header #divContainer #divInscription #inscription{
-  display:inline-block;
-  width: 120px;
-  text-align: center;
-  font-weight: bold;
-  margin-right: 50px;
-  background-color: darkseagreen;
+header.wrapper{
+  margin: 42px 50px 0px 50px;
+  background-color: darkgrey;
 }
 
 /************************************** MAIN *********/
 /*-- main | WRAPPER */
-main .wrapper{
+main.wrapper{
   margin: 42px 50px 0px 50px;
-  width:auto;
-  min-width: 584px;
-  overflow-wrap: break-word;
-  background-color: rgb(94, 107, 68);
-}
-
-/*-- main-recherche | TITRE*/
-#main-recherche h1{
-  font-size: 20px;
-  font-weight:bold;
-  background-color: rgb(231, 192, 93);
-}
-#main-recherche h2{
-  font-size: 16px;
-  font-weight:lighter;
-  margin-top: 10px;
-  background-color: rgb(231, 192, 93);
-}
-
-/*-- main-recherche | RECHERCHE */
-#main-recherche #divSearch{
-  display:flex;
-  margin-top: 20px;
-}
-#main-recherche #icoMap{
-  display: flex;
-  align-items:center;
-  width: 50px;
-  height: 52px;
-  border-radius: 15px 0 0 15px;
-}
-#main-recherche #icoMap i{
-  font-size: 18px;
-  margin-left:17px;
-}
-#main-recherche #txtSearch{
-  font-weight:bold;
-  width: 60%;
-  max-width: 200px;
-  height: 50px;
-  border-style: solid;
-  border-width: 1px;
-  border-right: none;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-#main-recherche #txtSearch:focus-within{
-outline: none;
-}
-#main-recherche #btnSearch:hover{
-  border: 2px solid white;
-  background-color: #0065FC;
-  color:black;
-}
-#main-recherche #btnSearch{
-  letter-spacing: 1.25px;
-  font-weight: bold;
-  color:white;
-  border-radius: 0 15px 15px 0px;
-  border: none;
-  width: 136px;
-  height: 52px;
-}
-#main-recherche #btnSearch-sm{
-  display:none;
-}
-
-/*-- main-recherche | FILTRE */
-#main-recherche #divFilter{
-  display:flex;
-  margin-top: 30px;
-  background-color: lightcoral;
-}
-#main-recherche #divFilter #lblFilter{
-  font-weight: bold;
-  margin-right: 25px;
-  padding-top: 15px;
-}
-#main-recherche #divFilter li:hover{
-  background-color:#0065FC;
-  color:white;
-}
-#main-recherche #divFilter li {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  border: 2px solid #e6e5e5;
-  border-radius: 35px;
-  margin-right:32px;
-  margin-bottom:10px;
-  padding-left: 58px;
-  padding-right: 22px;
-  font-weight: bold;
-  height: 45px;
-  background-color: rgb(181, 235, 101);
-  position: relative;
-}
-#main-recherche #divFilter li .filter-icon {
-  height:45px;
-  width:45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color:#DEEBFF;
-  margin-right: 10px;
-  border:2px solid #DEEBFF;
-  position:absolute;
-  left:-1px;
-}
-
-/*-- main-recherche | INFO*/
-#main-recherche #divInfo{
-  margin-top: 35px;
-  background-color: mediumspringgreen;
-}
-#main-recherche #divInfo .info{
-  display: flex;
-}
-#main-recherche #divInfo .icoInfo{
-  width: 23px;
-  height: 23px;
-  border-style: solid;
-  border-width: 1px;
-  background-color: white;
-  border-radius: 50%;
-}
-#main-recherche #divInfo .icoInfo i{
-  font-size:small;
-  margin-left: 9px;
-  margin-right: 9px;
-}
-#main-recherche #divInfo span{
-  white-space: normal;
-  margin-left:12px;
-}
-
-/*-- main-hebergement | HEBERGEMENT*/
-#main-hebergement #divMainContainer{
-  display: flex;
-}
-#main-hebergement .sectionContainer{
-  background-color:#aeaeb4;
-  border:3px solid #717172;
-  border-radius: 8px;
-  padding: 10px 10px;
-}
-#main-hebergement .element{
-  color:white;
-  background-color:#7971ea;
-  border:3px solid #443ea0;
-  border-radius: 8px;
-  padding: 10px 10px;
-  font-size: 1.5em;
-  text-align: center;
-}
-#main-hebergement .row{
-  display: flex;
-}
-#main-hebergement .grow-6{
-  flex-grow:6;
-}
-#main-hebergement .grow-12{
-  flex-grow:12;
-}
-#main-hebergement .grow-4{
-  flex-grow:4;
-}
-#main-hebergement{
-  margin-top:50px;
-}
-#main-hebergement #divHebergement{
-  margin-right: 5%;
-}
-
-/*-- main-activite | ACTIVITE */
-#main-activite #divMainContainer{
-  display:flex;
-  background-color: yellowgreen;
-}
-#main-activite .sectionContainer{
-  background-color:#aeaeb4;
-  border:3px solid #717172;
-  border-radius: 8px;
-  padding: 10px 10px;
-}
-#main-activite .element{
-  color:white;
-  background-color:#7971ea;
-  border:3px solid #443ea0;
-  border-radius: 8px;
-  padding: 10px 10px;
-  font-size: 1.5em;
-  text-align: center;
-}
-#main-activite .row{
-  display: flex;
-}
-#main-activite .grow-3{
-  flex-grow: 3;
-}
-#main-activite .grow-12{
-  flex-grow: 12;
+  background-color: darkgrey;
 }
 
 /************************************** FOOTER *********/
 /*-- footer | WRAPPER */
-footer{
-  background-color: rgb(132, 139, 139);
-}
-footer .wrapper{
-  width: auto;
-  min-width: 684px;
-  background-color: rgb(132, 139, 139);
+#footerContainer.wrapper{
   margin: 40px 50px 0px 50px;
-  padding-top: 40px;
-}
-footer #divMainContainer{
-  display:flex;
-  background-color: yellowgreen;
-}
-footer .sectionContainer{
-  background-color:#aeaeb4;
-  border:3px solid #717172;
-  border-radius: 8px;
-  padding: 10px 10px;
-}
-footer .element{
-  color:white;
-  background-color:#7971ea;
-  border:3px solid #443ea0;
-  border-radius: 8px;
-  padding: 10px 10px;
-  font-size: 1.5em;
-  text-align: center;
-}
-footer .row{
-  display: flex;
-}
-footer .grow-4{
-  flex-grow: 3;
-}
-footer .grow-12{
-  flex-grow: 12;
-}
-
-/* @MEDIA QUERY | Tablet */
-@media all and (min-width: 426px) and (max-width: 768px){
-  body{
-    background-color: rgb(214, 163, 33);
-  }
-  /*-- main-recherche | FILTRE */
-  #main-recherche #divFilter li {
-    margin-right:33px;
-  }
+  background-color: darkgrey;
 }
 
 /* @MEDIA QUERY | Phone */
 @media all and (max-width: 425px){
+  body{
+    background-color: rgb(221, 221, 215);
+  }
   /************************************** HEADER *********/
-  /*-- header | WRAPPER */
-  header .wrapper{
-    width:auto;
-    margin: 15px 0px 0px 0px;
-    min-width: 320px;
-  }
-  header #divContainer{
-    flex-wrap:wrap;
-    align-items: center;
-    height: 125px;
-  }
-
-  /*-- header | RESERVIA */
-  header #divContainer #divReservia img{
-    margin-left:20px;
-  }
-
-  /*-- header | NAVIGATION */
-  header #divContainer nav{
-    width: 100%;
-    order:3;
-  }
-  header #divContainer nav ul li {
-    text-align: center;
-    width: 50%;
-  }
-  header #divContainer nav ul li #hebergement,
-  header #divContainer nav ul li #activite {
-    display: inline-block;
-    width: 100%;
-    padding: 0px 0px 10px 0px;
-  }
-  header #divContainer nav ul li #hebergement:focus, 
-  header #divContainer nav ul li #activite:focus {
-    border-top: none;
-    border-bottom: 3px solid #0065FC;
-  }
-
-  /*-- header | INSCRIPTION */
-  header #divContainer #divInscription{
-    order:2;
-    background-color: darkgoldenrod;
-  }
-  header #divContainer #divInscription #inscription {
-    margin-right: 0px;
-  }
-  /************************************** MAIN *********/
-  /*-- main | WRAPPER */
-  main .wrapper{
-    margin: 0px 20px 0px 20px;
-    width: auto;
-    min-width: 280px;
-    background-color: darkslategray;
-  }
-
-  /*-- main-recherche | TITRE*/
-  #main-recherche h1{
-    letter-spacing: 1.05px;
-    background-color: dimgray;
-  }
-  #main-recherche h2{
-    background-color: dimgray;
-  }
-
-  /*-- main-recherche | RECHERCHE*/
-  #main-recherche #divSearch{
-    margin-top: 40px;
-  }
-  #main-recherche #btnSearch{
-    display:none;
-  }
-  #main-recherche #btnSearch-sm:hover{
-    border: 2px solid white;
-    background-color: #0065FC;
-    color:black;
-  }
-  #main-recherche #btnSearch-sm{
-    display: inline;
-    color:white;
-    border-radius: 35%;
-    border: none;
-    width: 50px;
-    height: 50px;
-  }
-
-  #main-recherche #btnSearch-sm i{
-    font-size: 16px;
-  }
-
-  /*-- main-recherche | FILTRE */
-  #main-recherche #divFilter{
-    display:inline-block;
-  }
-  #main-recherche #divFilter #lblFilter{
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-  #main-recherche #divFilter li{
-    margin-right:5px;
-  }
-
-  /*-- main-recherche | INFO*/
-  #main-recherche #divInfo{
-    margin-top: 35px;
-    background-color: rgb(0, 79, 250);
-  }
-
-  /*-- main-hebergement | HEBERGEMENT*/
-  #main-hebergement #divHebergement{
-    margin-right: 0px;
-  }
-  #main-hebergement .row{
-    flex-wrap: wrap;
-  }
-  #main-hebergement #divMainContainer{
-    flex-wrap: wrap-reverse;
-  }
-
-  /*-- main-activite | ACTIVITE*/
-  #main-activite #divMainContainer{
-    flex-wrap: wrap;
-  }
-  #main-activite .row{
-    flex-wrap: wrap;
-  }
-
-  /************************************** FOOTER *********/
-  /*-- footer | WRAPPER */
-  footer .wrapper{
-    width: auto;
-    min-width: 320px;
-    margin: 40px 20px 0px 20px;
-    background-color: rgb(132, 139, 139);
-  }
-
-  footer #divMainContainer{
-    flex-wrap: wrap;
-  }
-  footer .row{
-    flex-wrap: wrap;
-  }
+/*-- header | WRAPPER */
+header.wrapper{
+  margin: 10px 0px 0px 0px;
+  background-color: darkgrey;
 }
 
+/************************************** MAIN *********/
+/*-- main | WRAPPER */
+main.wrapper{
+  margin: 0px 20px 0px 20px;
+  background-color: darkgrey;
+}
+
+/************************************** FOOTER *********/
+/*-- footer | WRAPPER */
+#footerContainer.wrapper{
+  margin: 40px 20px 0px 20px;
+  background-color: darkgrey;
+}
+  /************************************** GRID *********/
+  /*gridHebergement*/
+  main #hebergementContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "populaire" 
+        "hebergement";
+  }
+
+  /*gridHebergement*/
+  main #hebergement{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "titre"
+        "cardH1"
+        "cardH2"
+        "cardH3"
+        "cardH4"
+        "cardH5"
+        "cardH6"
+        "afficherPlus";
+  }
+
+  /*gridActivite*/
+  main #activite{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "titre"
+        "cardA1"
+        "cardA2"
+        "cardA3"
+        "cardA4"
+        "cardA5"
+        "cardA6";
+  }
+
+  /*gridFooter*/
+  #footerContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "aPropos"
+        "nosHebergements"
+        "assistance";
+  }
+  /*FIN GRID***********************************************/
+}

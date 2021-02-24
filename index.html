@@ -11,197 +11,49 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-  <header>
-    <div id="divContainer" class="wrapper">
-      <div id="divReservia">
-        <img src="images/logo/reservia.png" alt="Réservia, hébergements de vacances">
-      </div>
-      <nav>
-        <ul>
-          <li><a id="hebergement" href="#hebergement">Hébergements</a></li>
-          <li><a id="activite" href="#activite">Activités</a></li>
-        </ul>
-      </nav>
-      <div id="divInscription">
-        <a id="inscription" class="blue" href="">S'inscrire</a>
-      </div>
+  <div id="wrapperReservia">
+    <div id="gridReservia">
+      <header class="wrapper">
+        header
+      </header>
+      <main class="wrapper">
+        <div id="recherche" class="item">recherche</div>
+        <section id="hebergementContainer">
+          <div id="hebergement" class="item">
+            <h2>Hébergements à Marseille</h2>
+            <article id="cardH1" class="cardHebergement">1</article>
+            <article id="cardH2" class="cardHebergement">2</article>
+            <article id="cardH3" class="cardHebergement">3</article>
+            <article id="cardH4" class="cardHebergement">4</article>
+            <article id="cardH5" class="cardHebergement">5</article>
+            <article id="cardH6" class="cardHebergement">6</article>
+            <a id="afficherPlus" href="#">Afficher plus</a>
+          </div>
+          <div id="populaire" class="item">
+            <h2>Les plus populaires</h2>
+            <article id="cardP1" class="cardPopulaire">1</article>
+            <article id="cardP2" class="cardPopulaire">2</article>
+            <article id="cardP3" class="cardPopulaire">3</article>
+          </div>
+        </section>
+        <section id="activite" class="item">
+          <h2>Activités à Marseille</h2>
+          <article id="cardA1" class="cardActivite">1</article>
+          <article id="cardA2" class="cardActivite">2</article>
+          <article id="cardA3" class="cardActivite">3</article>
+          <article id="cardA4" class="cardActivite">4</article>
+          <article id="cardA5" class="cardActivite">5</article>
+          <article id="cardA6" class="cardActivite">6</article>
+        </section>
+      </main>
+      <footer>
+        <div id="footerContainer" class="wrapper">
+          <div id="aPropos">aPropos</div>
+          <div id="nosHebergements">nosHebergements</div>
+          <div id="assistance">assistance</div>
+        </div>
+      </footer>
     </div>
-  </header>
-  <main>
-    <div class="wrapper">
-      <section id="main-recherche">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <h2>En plein centre ville ou en pleine nature</h2>
-        <!-- La barre de recherche -->
-        <div id="divSearch">
-          <div id="icoMap" class="bgGreyLight">
-            <i class="fas fa-map-marker-alt fa-lg"></i>
-          </div>
-          <input type="text" id="txtSearch" class="bdGreyLight" name="search" value="Marseille, France">
-          <button id="btnSearch" class="bgBlue">Rechercher</button>
-          <button id="btnSearch-sm" class="bgBlue">
-            <i class="fas fa-search fa-lg"></i>
-          </button>
-        </div>
-        <!-- Les filtres de recherche -->
-        <div id="divFilter">
-          <span id="lblFilter">Filtres</span>
-          <ul>
-            <li>
-              <div class="filter-icon">
-                <i class="fas fa-money-bill-wave blue"></i>
-              </div>
-              <span>Économique</span>
-            </li>
-            <li>
-              <div class="filter-icon">
-                <i class="fas fa-child blue"></i>
-              </div>
-              <span>Familial</span>
-            </li>
-            <li>
-              <div class="filter-icon">
-                <i class="fas fa-heart blue"></i>
-              </div>
-              <span>Romantique</span>
-            </li>
-            <li>
-              <div class="filter-icon">
-                <i class="fas fa-dog blue"></i>
-              </div>
-              <span>Animaux autorisés</span>
-            </li>
-          </ul>
-        </div>
-        <!-- Le label d'information -->
-        <div id="divInfo">
-          <div class="info">
-            <div class="icoInfo bdGreyLight"><i class="fas fa-info blue"></i></div>
-              <span>Plus de 500 logements sont disponibles dans cette ville</span>
-          </div>
-        </div>
-      </section>
-      <section id="main-hebergement">
-        <div id="divMainContainer">
-            <!-- Hebergement -->
-            <div id="divHebergement" class="sectionContainer grow-6">
-              <div class="row">
-                <div class="element grow-12">Hébergement</div>
-              </div>
-              <div class="row">
-                <div class="element grow-4">hotel 11111111111</div>
-                <div class="element grow-4">hotel 22222222</div>
-                <div class="element grow-4">hotel 3333333333</div>
-              </div>
-              <div class="row">
-                <div class="element grow-4">hotel 44444444444</div>
-                <div class="element grow-4">hotel 5555555555</div>
-                <div class="element grow-4">hotel 6</div>
-              </div>
-              <div class="row">
-                <div class="element grow-12">plus</div>
-              </div>
-            </div>
-            <!-- Les plus populaires -->
-            <div id="divPopulaire" class="sectionContainer grow-6">
-              <div class="row">
-                <div class="element grow-12">Les plus populaires</div>  
-              </div>
-              <div class="row">
-                <div class="element grow-12">hotel 00000000001</div>
-              </div>
-              <div class="row">
-                <div class="element grow-12">hotel 00000000000002</div>
-              </div>
-              <div class="row">
-                <div class="element grow-12">hotel 00000000000003</div>
-              </div>
-            </div>
-        </div>
-      </section>
-      <section id="main-activite">
-        <div id="divMainContainer">
-          <!-- Activité 1-->
-          <div id="divActivite_1" class="sectionContainer grow-3">
-            <div class="row">
-              <div class="element grow-12">Activités à Marseille</div>
-            </div>
-            <div class="row">
-              <div class="element grow-12">Vieux Port</div>
-            </div>
-          </div>
-          <!-- Activité 2-->
-          <div id="divActivite_2" class="sectionContainer grow-3">
-            <div class="row">
-              <div class="element grow-12">Fort de pomègues</div>  
-            </div>
-            <div class="row">
-              <div class="element grow-12">Iles du Frioul</div>
-            </div>
-          </div>
-          <!-- Activité 3-->
-          <div id="divActivite_3" class="sectionContainer grow-3">
-            <div class="row">
-              <div class="element grow-12">Parc Nationnal des Calanques</div>  
-            </div>
-          </div>
-          <!-- Activité 4-->
-          <div id="divActivite_4" class="sectionContainer grow-3">
-            <div class="row">
-              <div class="element grow-12">Notre-Dame-de-la-Garde</div>  
-            </div>
-            <div class="row">
-              <div class="element grow-12">Parc Longchamp</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <div class="wrapper">
-      <div id="divMainContainer">
-        <!-- A propos-->
-        <div id="divApropos" class="sectionContainer grow-4">
-          <div class="row">
-            <div class="element grow-12">A propos</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Fonctionnement du site</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Conditions générales de vente</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Données et confidentialité</div>
-          </div>
-        </div>
-        <!-- Hébergement-->
-        <div id="divHebergement" class="sectionContainer grow-4">
-          <div class="row">
-            <div class="element grow-12">Nos hébergements</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Charte qualité</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Soumettre votre hôtel</div>
-          </div>
-        </div>
-        <!-- Assistance-->
-        <div id="divAssistance" class="sectionContainer grow-4">
-          <div class="row">
-            <div class="element grow-12">Assistance</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Centre d'aide</div>
-          </div>
-          <div class="row">
-            <div class="element grow-12">Nous contacter</div>
-          </div>
-        </div>
-      </div>      
-    </div>
-  </footer>
+  </div>
 </body>
 </html>
