@@ -8,9 +8,12 @@
 body{
   background-color: #3b404e;
 }
-
 ul{
   list-style: none;
+}
+a:hover{
+  color: #0065FC;
+  text-decoration: none;
 }
 a{
   color: black;
@@ -20,9 +23,11 @@ button{
   outline: none;
   cursor:pointer;
 }
-
 span{
   white-space:pre;
+}
+h2{
+  font-size:1.3em;
 }
 
 .blue{
@@ -48,11 +53,8 @@ span{
 /*gridReservia*/
 #gridReservia{
   display: grid;
-  width: auto;
-  height: 600px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
       "header"
       "main"
@@ -74,7 +76,7 @@ footer {
 main{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
       "recherche"
       "hebergementContainer"
@@ -90,11 +92,10 @@ main #activite {
   grid-area: activite;
 }
 
-/*gridHebergement*/
+/*gridHebergementContainer*/
 main #hebergementContainer{
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
+  grid-gap:34px;
   grid-template-areas:
       "hebergement populaire";
 }
@@ -108,13 +109,15 @@ main #populaire {
 /*gridHebergement*/
 main #hebergement{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap:28px;
   grid-template-areas:
       "titre titre titre"
       "cardH1 cardH2 cardH3"
       "cardH4 cardH5 cardH6"
       "afficherPlus afficherPlus afficherPlus";
+  background-color: brown;
+  padding:35px 35px 35px 35px;
+  border-radius: 20px 20px 20px 20px;
 }
 #hebergement h2 {
   grid-area: titre;
@@ -129,8 +132,9 @@ main #hebergement{
 /*gridPopulaire*/
 main #populaire{
   display: grid;
+  grid-gap:35px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
       "titre"
       "cardP1"
@@ -153,8 +157,9 @@ main #populaire{
 /*gridActivite*/
 main #activite{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap:40px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
       "titre titre titre titre"
       "cardA1 cardA2 cardA4 cardA5"
@@ -188,7 +193,7 @@ main #activite{
 #footerContainer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
       "aPropos nosHebergements assistance";
 }
@@ -201,24 +206,6 @@ main #activite{
 #footerContainerter #assistance {
   grid-area: assistance;
 }
-
-/* OTHER STYLES */
-
-body {
-  background-color: #3b404e;
-
-}
-
-header, #recherche, #hebergement, #populaire, #activite, footer {
-  background-color: #1EAAFC;
-  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  color: #ffffff;
-  border-radius: 4px;
-  border: 6px solid #171717;
-  font-size: 18px;
-  font-weight: bold;
-}
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
@@ -228,60 +215,545 @@ header, #recherche, #hebergement, #populaire, #activite, footer {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 /************************************** HEADER *********/
 /*-- header | WRAPPER */
 header.wrapper{
   margin: 42px 50px 0px 50px;
-  background-color: darkgrey;
+  /* background-color: darkgrey; */
+}
+header #divContainer{
+  display: flex;
 }
 
+/*-- header | RESERVIA */
+header #divContainer #divReservia{
+  margin-right: auto;
+  background-color: darkgray;
+}
+header #divReservia img{
+  width:90px;
+}
+
+/*-- header | NAVIGATION */
+header #divContainer nav{
+  background-color: darkkhaki;
+}
+header #divContainer nav ul{
+  display: flex;
+}
+/*-- header | NAVIGATION - Hebergement */
+header #hebergement {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+header #hebergement:focus {
+  color:#0065FC;
+  border-top: 2px solid #0065FC;
+}
+/*-- header | NAVIGATION - Activite */
+header #activite {
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+header #activite:focus {
+  color:#0065FC;
+  border-top: 2px solid #0065FC;
+}
+
+/*-- header | INSCRIPTION */
+header #inscription{
+  font-weight: bold;
+}
 /************************************** MAIN *********/
 /*-- main | WRAPPER */
 main.wrapper{
-  margin: 42px 50px 0px 50px;
-  background-color: darkgrey;
+  margin: 42px 50px 50px 50px;
+  background-color: rgb(94, 107, 68);
+}
+
+/*-- main recherche | TITRE*/
+main #recherche h1{
+  font-size: 20px;
+  font-weight:bold;
+  background-color: rgb(231, 192, 93);
+}
+main #recherche h2{
+  font-weight:lighter;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: rgb(231, 192, 93);
+}
+
+/*-- main recherche | RECHERCHE */
+main #divSearch{
+  display:flex;
+  margin-top: 20px;
+}
+main #icoMap{
+  display: flex;
+  align-items:center;
+  width: 50px;
+  height: 52px;
+  border-radius: 15px 0 0 15px;
+}
+main #icoMap i{
+  font-size: 18px;
+  margin-left:17px;
+}
+main #txtSearch{
+  font-weight:bold;
+  width: 60%;
+  max-width: 200px;
+  height: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-right: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main #txtSearch:focus-within{
+outline: none;
+}
+main #btnSearch:hover{
+  border: 2px solid white;
+  background-color: #0065FC;
+  color:black;
+}
+main #btnSearch{
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  color:white;
+  border-radius: 0 15px 15px 0px;
+  border: none;
+  width: 136px;
+  height: 52px;
+}
+main #btnSearch-sm{
+  display:none;
+}
+
+/*-- main recherche | FILTRE */
+main #divFilter{
+  display:flex;
+  margin-top: 30px;
+  background-color: lightcoral;
+}
+main #divFilter #lblFilter{
+  font-weight: bold;
+  margin-right: 25px;
+  padding-top: 15px;
+}
+main #divFilter li:hover{
+  background-color:#0065FC;
+  color:white;
+}
+main #divFilter li {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #e6e5e5;
+  border-radius: 35px;
+  margin-right:32px;
+  margin-bottom:10px;
+  padding-left: 58px;
+  padding-right: 22px;
+  font-weight: bold;
+  height: 45px;
+  /* background-color: rgb(181, 235, 101); */
+  position: relative;
+}
+main #divFilter li .filter-icon {
+  height:45px;
+  width:45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color:#DEEBFF;
+  margin-right: 10px;
+  border:2px solid #DEEBFF;
+  position:absolute;
+  left:-1px;
+}
+
+/*-- main recherche | INFO*/
+main #divInfo{
+  margin-top: 35px;
+  background-color: mediumspringgreen;
+}
+main #divInfo .info{
+  display: flex;
+}
+main #divInfo .icoInfo{
+  width: 23px;
+  height: 23px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  border-radius: 50%;
+}
+main #divInfo .icoInfo i{
+  font-size:small;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+main #divInfo span{
+  white-space: normal;
+  margin-left:12px;
+}
+
+/*-- main hebergement | CONTAINER*/
+main #hebergementContainer{
+  margin-top:50px;
+}
+
+/*-- main hebergement | HEBERGEMENT*/
+main #hebergement h2{
+  font-weight:bold;
+  color: black;
+}
+main #hebergement h4{
+  margin-top: 40px;
+  font-size: 0.7em;
+}
+main #hebergement a{
+  font-size:1.2em;
+  font-weight:bold;
+}
+
+main .cardHebergement{
+  width: 100%;
+  height: 100%;
+  max-width:230px;
+  min-width:180px;
+  max-height:171px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 5px #c2c2c2;
+  background-color: white;
+  padding: 5px 5px 0px 5px;
+}
+main .cardContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 33%;
+  margin-top:8px;
+  margin-left:8px;
+}
+
+main .cardHebergement .imgContainer{
+  border-radius: 15px 15px 0 0;
+  width:100%;
+  height: 60%;
+  background-color: brown;
+}
+main .cardHebergement img{
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+}
+main .cardHebergement p{
+  font-size: 13px;
+}
+main .cardHebergement p b{
+  font-size: 13px;
+}
+main .cardHebergement i{
+  font-size: 12px;
+  letter-spacing: -3px;
+}
+
+/*-- main hebergement | POPULAIRE*/
+#populaire{
+  background-color: brown;
+  margin: 0px 40px 0px 0px;
+  padding:35px 35px 35px 35px;
+  border-radius: 20px 20px 20px 20px;
+}
+#populaire #flexContainer-title{
+  display: flex;
+}
+#populaire #flexContainer-title h2{
+  margin-right: auto;
+}
+#populaire .flexContainerCard{
+  display: flex;
+}
+main .cardPopulaire{
+  width:100%;
+  height:100%;
+  max-width: 343px;
+  min-width:290px;
+  min-height: 143px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 5px #c2c2c2;
+  background-color: white;
+  padding: 5px 5px 0px 5px;
+}
+main .cardPopulaire .imgContainer{
+  border-radius: 15px 15px 0 0;
+  width:42%;
+  height: 143px;
+  background-color: brown;
+}
+main .cardPopulaire img{
+  border-radius: 15px 0px 0 15px;
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+  min-width: 125px;
+}
+#populaire .cardContent{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+}
+#populaire p{
+  padding-top: 8px;
+}
+#populaire .starContainer{
+  padding-bottom: 5px;
+}
+
+/*-- main activite | ACTIVITE*/
+main #activite {
+  background-color: brown;
+  margin-top: 50px;
+  padding: 35px 0px 0px 0px;
+}
+main #activite .cardActivite{
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 1px 2px 5px #c2c2c2;
+  background-color: white;
+}
+main #cardA1{
+  height: 445px;
+}
+main #cardA1 #imgContainerA1{
+  height: 400px;
+}
+main #cardA2{
+  height: 225px;
+}
+main #cardA2 #imgContainerA2{
+  height: 180px;
+}
+main #cardA3{
+  height: 155px;
+}
+main #cardA3 #imgContainerA3{
+  height: 110px;
+}
+main #cardA4{
+  height: 445px;
+}
+main #cardA4 #imgContainerA4{
+  height: 400px;
+}
+main #cardA5{
+  height: 185px;
+}
+main #cardA5 #imgContainerA5{
+  height: 135px;
+}
+main #cardA6{
+  height: 220px;
+}
+main #cardA6 #imgContainerA6{
+  height: 180px;
+}
+main #activite .cardContent{
+  height: 20px;
+  margin: 15px;
+}
+main #activite .cardContent h3{
+  font-weight: bold;
+}
+main #activite .imgContainer{
+  width: 100%;
+}
+main #activite img{
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /************************************** FOOTER *********/
 /*-- footer | WRAPPER */
 #footerContainer.wrapper{
-  margin: 40px 50px 0px 50px;
+  padding: 40px 50px 40px 50px;
   background-color: darkgrey;
 }
 
-/* @MEDIA QUERY | Phone */
-@media all and (max-width: 425px){
-  body{
-    background-color: rgb(221, 221, 215);
+#footerContainer .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#footerContainer #aPropos{
+  height: 110px;
+}
+#footerContainer #nosHebergements, #assistance{
+  height: 80px;
+}
+
+@media all and (min-width: 1025px) and (max-width: 1240px){
+  #gridReservia{
+    background-color: rgb(187, 35, 8);
   }
-  /************************************** HEADER *********/
-/*-- header | WRAPPER */
-header.wrapper{
-  margin: 10px 0px 0px 0px;
-  background-color: darkgrey;
+  /*gridHebergement*/
+  main #hebergement{
+    display: grid;
+    grid-gap:28px;
+    grid-template-areas:
+        "titre titre"
+        "cardH1 cardH2"
+        "cardH3 cardH4"
+        "cardH5 cardH6"
+        "afficherPlus afficherPlus";
+    background-color: brown;
+    padding:35px 35px 35px 35px;
+    border-radius: 20px 20px 20px 20px;
+  }
 }
 
-/************************************** MAIN *********/
-/*-- main | WRAPPER */
-main.wrapper{
-  margin: 0px 20px 0px 20px;
-  background-color: darkgrey;
+@media all and (min-width: 806px) and (max-width: 1024px){
+  #gridReservia{
+    background-color: rgb(187, 94, 8);
+  }
+  /*gridHebergement*/
+  main #hebergementContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "populaire" 
+        "hebergement";
+  }
+  /*gridPopulaire*/
+  main #populaire{
+    display: grid;
+    grid-gap:35px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "titre titre"
+        "cardP1 cardP2"
+        "cardP3 cardP3";
+  }
+  #populaire {
+    margin: 0px;
+  }
+  /*gridActivite*/
+  main #activite{
+    display: grid;
+    grid-gap:40px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+        "titre titre"
+        "cardA1 cardA2"
+        "cardA1 cardA2"
+        "cardA1 cardA3"
+        "cardA1 cardA3"
+        "cardA4 cardA5"
+        "cardA4 cardA5"
+        "cardA4 cardA6"
+        "cardA4 cardA6";
+  }
+  #footerContainer #aPropos {
+    margin-right:40px;
+  }
 }
+/* @media all and (min-width: 633px) and (max-width:  */
+@media all and (min-width: 580px) and (max-width: 805px){
+  #gridReservia{
+    background-color: rgb(8, 187, 8);
+  }
+  /*gridHebergement*/
+  main #hebergementContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "populaire" 
+        "hebergement";
+  }
+  /*gridHebergement*/
+  main #hebergement{
+    display: grid;
+    grid-gap:28px;
+    grid-template-areas:
+        "titre titre"
+        "cardH1 cardH2"
+        "cardH3 cardH4"
+        "cardH5 cardH6"
+        "afficherPlus afficherPlus";
+    background-color: brown;
+    padding:35px 35px 35px 35px;
+    border-radius: 20px 20px 20px 20px;
+  }
+  /*gridPopulaire*/
+  main #populaire{
+    display: grid;
+    grid-gap:35px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "titre"
+        "cardP1"
+        "cardP2"
+        "cardP3";
+  }
+  #populaire {
+    margin: 0px;
+  }
+  /*gridActivite*/
+  main #activite{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "titre titre"
+        "cardA1 cardA4"
+        "cardA2 cardA6"
+        "cardA5 cardA3";
+  }
+  /*gridFooter*/
+  #footerContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "aPropos nosHebergements "
+        "assistance assistance";
+  }
+  #footerContainer #aPropos {
+    margin-bottom: 30px;
+  }
+}
+/* @media all and (max-width: 632px){ */
+/* @MEDIA QUERY | Phone */
+@media all and (max-width: 579px){
+  #gridReservia{
+    background-color: rgb(42, 30, 153);
+  }
 
-/************************************** FOOTER *********/
-/*-- footer | WRAPPER */
-#footerContainer.wrapper{
-  margin: 40px 20px 0px 20px;
-  background-color: darkgrey;
-}
   /************************************** GRID *********/
   /*gridHebergement*/
   main #hebergementContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
         "populaire" 
         "hebergement";
@@ -291,7 +763,7 @@ main.wrapper{
   main #hebergement{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto ;
     grid-template-areas:
         "titre"
         "cardH1"
@@ -303,11 +775,15 @@ main.wrapper{
         "afficherPlus";
   }
 
+  #populaire {
+    margin: 0px;
+  }
+  
   /*gridActivite*/
   main #activite{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto ;
     grid-template-areas:
         "titre"
         "cardA1"
@@ -322,11 +798,163 @@ main.wrapper{
   #footerContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
     grid-template-areas:
         "aPropos"
         "nosHebergements"
         "assistance";
   }
   /*FIN GRID***********************************************/
+  
+  /************************************** HEADER *********/
+  /*-- header | WRAPPER */
+  header.wrapper{
+    margin: 10px 0px 0px 0px;
+    background-color: darkgrey;
+  }
+  header #divContainer{
+    flex-wrap:wrap;
+    align-items: center;
+    height: 125px;
+  }
+
+  /*-- header | RESERVIA */
+  header #divReservia img{
+    margin-left:20px;
+  }
+
+  /*-- header | NAVIGATION */
+  header #divContainer nav{
+    width: 100%;
+    order:3;
+  }
+  header #divContainer nav ul li {
+    text-align: center;
+    width: 50%;
+  }
+  header #divContainer nav ul li #hebergement,
+  header #divContainer nav ul li #activite {
+    display: inline-block;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+  }
+  header #divContainer nav ul li #hebergement:focus, 
+  header #divContainer nav ul li #activite:focus {
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+  }
+
+  /*-- header | INSCRIPTION */
+  header #divContainer #divInscription{
+    order:2;
+    background-color: darkgoldenrod;
+  }
+  header #inscription {
+    margin-right: 0px;
+  }
+
+  /************************************** MAIN *********/
+  /*-- main | WRAPPER */
+  main.wrapper{
+    margin: 0px 20px 0px 20px;
+    background-color: darkgrey;
+  }
+
+  /*-- main-recherche | TITRE*/
+  main #recherche h1{
+    letter-spacing: 1.05px;
+    background-color: dimgray;
+  }
+  main #recherche h2{
+    background-color: dimgray;
+  }
+
+  /*-- main-recherche | RECHERCHE*/
+  main #recherche #divSearch{
+    margin-top: 40px;
+  }
+  main #recherche #btnSearch{
+    display:none;
+  }
+  main #recherche #btnSearch-sm:hover{
+    border: 2px solid white;
+    background-color: #0065FC;
+    color:black;
+  }
+  main #recherche #btnSearch-sm{
+    display: inline;
+    color:white;
+    border-radius: 35%;
+    border: none;
+    width: 50px;
+    height: 50px;
+  }
+  main #recherche #btnSearch-sm i{
+    font-size: 16px;
+  }
+
+  /*-- main-recherche | FILTRE */
+  main #recherche #divFilter{
+    display:inline-block;
+  }
+  main #recherche #divFilter #lblFilter{
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  main #recherche #divFilter li{
+    margin-right:5px;
+  }
+
+  /*-- main-recherche | INFO*/
+  main #recherche #divInfo{
+    margin-top: 35px;
+    background-color: rgb(0, 79, 250);
+  }
+  /*-- main-hebergement | HEBERGEMENT*/
+  main #hebergement{
+    padding: 35px 0px 0px 0px;
+    border-radius: 0px;
+  }
+  main .cardHebergement {
+    max-width: none;
+    padding:0px;
+  }
+  /*-- main-hebergement | POPULAIRE*/
+  main .cardPopulaire{
+    max-width: none;
+    padding:0px;
+  }
+  #populaire{
+    padding:0px;
+    border-radius: 0px;
+  }
+  /*-- main-activite | ACTIVITE*/
+  main #activite{
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+  main #cardA1, main #cardA2, main #cardA3,
+  main #cardA4, main #cardA5, main #cardA6{
+    height: auto;
+  }
+  main #cardA1 #imgContainerA1,
+  main #cardA2 #imgContainerA2,
+  main #cardA3 #imgContainerA3,
+  main #cardA4 #imgContainerA4,
+  main #cardA5 #imgContainerA5,
+  main #cardA6 #imgContainerA6{
+    height: 130px;
+  }
+
+
+  /************************************** FOOTER *********/
+
+  /*-- footer | WRAPPER */
+  #footerContainer.wrapper{
+    padding: 40px 20px 0px 20px;
+    background-color: darkgrey;
+  }
+  #footerContainer .content{
+    margin-bottom: 30px;
+  }
 }
